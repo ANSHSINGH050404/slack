@@ -1,6 +1,6 @@
-import React from "react";
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 
-function App() {
+export default function App() {
   return (
     <div>
       <header>
@@ -11,8 +11,16 @@ function App() {
           <UserButton />
         </SignedIn>
       </header>
+      
+      <main>
+        <SignedOut>
+          <p>Please sign in to access the app</p>
+        </SignedOut>
+        <SignedIn>
+          <p>Welcome! You're signed in.</p>
+          {/* Your app content here */}
+        </SignedIn>
+      </main>
     </div>
   );
 }
-
-export default App;
