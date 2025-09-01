@@ -5,13 +5,10 @@ import { functions, inngest } from "./config/inngest.js";
 import { serve } from "inngest/express";
 // import cors from "cors";
 import { connectDb } from "./db/db.js";
-import dotenv from 'dotenv'
+import dotenv from "dotenv";
 const app = express();
 
 dotenv.config();
-
-
-
 
 // Middleware
 app.use(express.json());
